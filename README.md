@@ -4,7 +4,7 @@ A simple Javascript Lisp parser
 
 ## How to use it
 
-The best sample is the __index.html__.
+The best sample is __index.html__.
 
 You have to import Lisp.js with the good path:
 
