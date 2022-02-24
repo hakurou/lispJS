@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+    </head>
+    <body>
+        <script type="module">
+
+            import Lisp from "./src/Lisp.js";
+
+            const l = new Lisp();
+            l.parse(`
+                ;(display (+ 1 2 3 4))
+
+                ;(define num 55)
+                ;(display num)
+                ;(newline)
+                ;(display (+ 1 num))
+                ;(define total (+ num num (+ 1 1)))
+                ;(newline)
+                ;(display total)
+
+                ;(define lam lambda)
+                ;(define fun (lam (x y) (+ x y)))
+                ;(define fun2 (lam (x y) (+ x y)))
+                ;(display (fun2 1 2))
+                ;(newline)
+                ;(display (fun 1 2))
+
+                ;(define f (lambda (x y) (+ x y)))
+                ;(display (f 4 7))
+
+                ;(define plus +)
+                ;(define total (plus 1 2 3 4))
+                ;(display total)
+
+                ;(define hello 
+                ;  (lambda () 
+                ;    (display "hello,world!")))
+                ;(hello)
+                ;(newline)
+
+                ;(define hello 
+                ;  (lambda (who) 
+                ;    (display (string-append "hello,world! " " mr " who))))
+                ;(hello "me")
+
+                ;(define test 
+                ;    (lambda () 
+                ;        (display "test return")
+                ;        (lambda () 
+                ;          (display "hello"))))
+                ;((test)) ;; les retours ne fonctionnent pas encore totalement
+
+                ;(define get-total (lambda (x y) (+ x y)))
+                ;(display (get-total 1 2))
+
+                ;(define test (quote (+ 1 2 3 4)))
+                ;(display test)
+                ;(eval test)
+
+                ;(define list (cons 1 2))
+                ;(display (car list))
+                ;(newline)
+                ;(display (cdr list))
+                ;(newline)
+                ;(display list)
+                ;(newline)
+                
+                ;(define new-pair (cons 1 null))
+                ;(display (cdr new-pair))
+                ;(newline)
+                ;(display (null? null))
+
+                ;(if (null? null)
+                ;    (display "c'est null") 
+                ;    (display "c'est pas null"))
+
+                ;(newline)
+
+                ;(define display-list
+                ;    (lambda (l)
+                ;    (display (car l))
+                ;    (newline)
+                ;    (if (pair? (cdr l)) 
+                ;        (display-list (cdr l)) 
+                ;        (display (cdr l)))))
+
+                ;(display-list (cons 1 (cons 2 (cons 3 (cons 4 null)))))
+
+                ;(define my-list1 (cons 1 (cons 2 (cons 3 null))))
+                ;(display (car my-list1))
+                ;(define my-list2 (cdr my-list1))
+                ;(display (car my-list2))
+                ;(define my-list3 (cdr my-list2))
+                ;(display (car my-list3))
+
+                ;(define fun (lambda ()
+                ;    (define toto 123)))
+
+                ;(define my-bool true)
+                ;(display my-bool)
+
+                ;(define my-quote (quote (+ 1 2)))
+                ;(define evaluated (eval my-quote))
+                ;(display evaluated)
+
+                ;(display (* 5 4))
+                ;(newline)
+                ;(display (- 5 4))
+                ;(newline)
+                ;(display (/ 5 4))
+                ;(newline)
+
+                ;(define num1 3)
+                ;(display (> num1 4))
+                ;(newline)
+                ;(display (< num1 4))
+
+                ;(define factorial (lambda (n)
+                ;    (if (<= n 1)
+                ;        1
+                ;        (* n (factorial (- n 1))))))
+                ;(display (factorial 4))
+
+                
+            `);
+        </script>
+    </body>
+</html>
